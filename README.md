@@ -19,7 +19,3 @@ If your need to access an array, first return the array string from your key. Th
   String value5 = parser.get('aKeyWithObject').Value; // returns '{"moreValues":"foo"}'
 ```
 
-#####*NOTE:*
-This class is currently agnostic to an array of objects in a JSON object.
-If you request a property on one of the objects in the array, it will search through the objects
-in the array in order and return the value the first time it finds the key.
