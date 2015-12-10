@@ -13,7 +13,7 @@ String jsonContent = '{' +
 					 '  "someKey": "someValue",' +
 					 '  "anotherKey": true,' +
 					 '  "aKeyWithObject": {' +
-					 '    "moreValues":"foo"' +
+					 '    "moreValues": "foo"' +
 					 '  },' +
 					 '  "anArray": [' +
 					 '    {' +
