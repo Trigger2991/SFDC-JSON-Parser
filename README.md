@@ -1,7 +1,7 @@
 # SFDC-JSON-Parser
 A JSON parsing abstraction built over the existing JSONParser in Salesforce to simplify extracting values (no need to create a class to serialise to).
 
-I built this when making many HTTP callouts to an API returning many different JSON formatted responses. I only wanted one or two values from each response so it made no send to build classes for these responses. Using the basic JSONParser in Salesforce is a nightmare iterating through the different tokens, working out where you are in the token tree.
+I built this when making many HTTP callouts to an API returning many different JSON formatted responses. I only wanted one or two values from each response so it made no sense to build classes for these responses. Using the basic JSONParser in Salesforce is a nightmare iterating through the different tokens, working out where you are in the token tree.
 
 So now you can just create this serialiser and call `get()` to find your key in the JSON object. `get()` only does a shallow scan of the parent object and always returns a `JSONField`. You then access the value from the `Value` property (`Value` is `null` if the key was not found). If your key is multiple objects deep then you can recursively call `get()` to access the key walking down the object tree. If the value for a key is an object or array then it will be returned as a string.
 
